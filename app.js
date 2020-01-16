@@ -5,6 +5,7 @@ const winsDisplay = document.getElementById('wins');
 const lossesDisplay = document.getElementById('losses');
 const drawsDisplay = document.getElementById('draws');
 const resultDisplay = document.getElementById('result-display');
+const computerChoiceDisplay = document.getElementById('computer-choice');
 
 let wins = 0;
 let losses = 0;
@@ -21,30 +22,12 @@ button.addEventListener('click', () => {
     console.log('user', userChoice);
     console.log('computer', computerChoice);
     console.log(result);
-
-    // if (isRockPaperSissors === 1) {
-    //     howItLanded = 'rock';
-    // }
-
-    // if (isRockPaperSissors === 0) {
-    //     howItLanded = 'paper';
-    // }
-
-    // if (isRockPaperSissors === -1) {
-    //     howItLanded = 'sissors';
-    // }
-
-    // console.log(howItLanded);
-    // const checkedRadio = document.querySelector('.input:checked');
-    // const userGuess = checkedRadio.value;
-
-    // console.log(checkedRadio);
-    // console.log('my guess', userGuess);
-    // console.log('the truth', howItLanded);
     console.log(winsDisplay);
     console.log(lossesDisplay);
     console.log(drawsDisplay);
     console.log(resultDisplay);
+
+    computerChoiceDisplay.textContent = computerChoice;
 
     if (result === 'win') {
         wins++;
