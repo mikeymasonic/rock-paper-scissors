@@ -1,16 +1,27 @@
-// IMPORT MODULES under test here:
-// import example from '../src/example.js';
+import { checkResult } from '../get-random-throw.js';
 
 const test = QUnit.test;
 
-test('time to test a function', function(assert) {
-    //Arrange
-    // Set up your parameters and expectations
+test('Testing rock v rock draw', function(assert) {
+    const player = 'rock';
+    const computer = 'rock';
+    const expectedOutcome = 'draw';
+    const shouldBeDrawResult = checkResult(player, computer);
+    assert.equal(shouldBeDrawResult, expectedOutcome);
+});
 
-    //Act 
-    // Call the function you're testing and set the result to a const
+test('Testing rock v paper lose', function(assert) {
+    const player = 'rock';
+    const computer = 'paper';
+    const expectedOutcome = 'lose';
+    const shouldBeDrawResult = checkResult(player, computer);
+    assert.equal(shouldBeDrawResult, expectedOutcome);
+});
 
-    //Assert
-    // Make assertions about what is expected valid result
-    assert.equal(true, false);
+test('Testing rock v scissors win', function(assert) {
+    const player = 'rock';
+    const computer = 'scissors';
+    const expectedOutcome = 'win';
+    const shouldBeDrawResult = checkResult(player, computer);
+    assert.equal(shouldBeDrawResult, expectedOutcome);
 });
