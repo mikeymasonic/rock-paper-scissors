@@ -7,20 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Rock, Paper, Scissors</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald|Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>We're going to play "Rock, Paper, Scissors"</header>
+    <header>Let's play "Rock, Paper, Scissors"</header>
     <main>
-        <h1>Here are the rules:</h1>
+        <div id="rules-display">
+        <h1>Rules:</h1>
         <ul>
             <li>Rock beats Scissors</li>
             <li>Scissors beats Paper</li>
             <li>Paper beats Rock</li>
         </ul>
+    </div>
         
-    <section>
-        <p>Make your selection and then click 'Let's Go!'</p>
+    <section class="arrange-selection">
+        <p>Make your selection and then click 'Shoot!'</p>
         <label>
         <input id="rock" type="radio" name="RPSSelector" value="rock" checked><img class='image-class' src = "/images/rock.png"/>
         </label>
@@ -30,16 +33,19 @@
         <label>
         <input id="scissors" type="radio" name="RPSSelector" value="scissors"> <img class='image-class' src = "/images/scissors.png"/><br> 
         </label>
-        <button id="button">Let's Go!</button>
-        <!-- <input type="submit" value="Let's Go!"> <input type="submit" value="Reset"> -->
+        <button id="button">Shoot!</button>
+        <button id="reset-button">Reset!</button>
     </section>
     
-    <section>
-        <p id="result-display"></p>
+    <section class="arrange-computer">
+        <span id="result-display"></span><br>
         <p id="computer-choice"></p>
         <img class="computer-image" id="computer-img" src="/images/rock.png"/>
         <img class="computer-image2" id="computer-img2" src="/images/paper.png"/>
         <img class="computer-image3" id="computer-img3" src="/images/scissors.png"/>
+    </section>
+
+    <section>
         <ul id="wins-losses-draws">
             
             <li>Total Wins: <span id="wins"></span></li>
@@ -51,7 +57,7 @@
     </main>
 
     <script type="module" src="app.js"></script>
-    <footer>&copy; 2020 RPC Inc.</footer>
+    <footer id="footer">&copy; 2020 RPC Inc.</footer>
 </body>
 
 </html>

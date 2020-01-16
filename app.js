@@ -6,33 +6,27 @@ const lossesDisplay = document.getElementById('losses');
 const drawsDisplay = document.getElementById('draws');
 const resultDisplay = document.getElementById('result-display');
 const computerChoiceDisplay = document.getElementById('computer-choice');
+const resetButton = document.getElementById('reset-button');
 
 let wins = 0;
 let losses = 0;
 let draws = 0;
 
 button.addEventListener('click', () => {
-    // const isRockPaperSissors = Math.round(Math.random() * 3);
-    // let howItLanded;
+    //resets computer's previous selection
     document.querySelector('.computer-image').style.display = 'none';
     document.querySelector('.computer-image2').style.display = 'none';
     document.querySelector('.computer-image3').style.display = 'none';
-
 
     const userInput = document.querySelector('input:checked');
     const userChoice = userInput.value;
     const computerChoice = getRandomThrow();
     const result = checkResult(userChoice, computerChoice);
-    console.log('user', userChoice);
-    console.log('computer', computerChoice);
-    console.log(result);
-    console.log(winsDisplay);
-    console.log(lossesDisplay);
-    console.log(drawsDisplay);
-    console.log(resultDisplay);
 
+    //displays computer's choice via text (disabled)
     computerChoiceDisplay.textContent = computerChoice;
 
+    //determines what image to show for computer choice
     if (computerChoice === 'rock') {
         document.querySelector('.computer-image').style.display = 'block';        
     } else if (computerChoice === 'paper') {
@@ -41,25 +35,35 @@ button.addEventListener('click', () => {
         document.querySelector('.computer-image3').style.display = 'block';
     }
 
+    //Win Loss Draw display
     if (result === 'win') {
         wins++;
         winsDisplay.textContent = wins;
-        resultDisplay.textContent = 'You win!';
+        resultDisplay.textContent = 'You won!  Great job!';
     } else if (result === 'lose') {
         losses++;
         lossesDisplay.textContent = losses;
-        resultDisplay.textContent = 'You lose!';
+        resultDisplay.textContent = 'You lost! Bummer!';
     } else {
         draws++;
         drawsDisplay.textContent = draws;
-        resultDisplay.textContent = 'Draw!';
+        resultDisplay.textContent = 'Draw! Try again!';
     }
 });
 
-// console.log(clickFunction);
-console.log(wins);
-console.log(losses);
-console.log(draws);
+//reset button
+resetButton.addEventListener('click', () => {
+    wins = 0;
+    losses = 0;
+    draws = 0;
 
+    winsDisplay.textContent = wins;
+    lossesDisplay.textContent = losses;
+    drawsDisplay.textContent = draws;
 
+    document.querySelector('.computer-image').style.display = 'none';
+    document.querySelector('.computer-image2').style.display = 'none';
+    document.querySelector('.computer-image3').style.display = 'none';
 
+    resultDisplay.textContent = '';
+});
