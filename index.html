@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    <header>We're going to play "Rock, Paper, Scissors"</header>
+    <main>
+        <h1>Here are the rules:</h1>
+        <ul>
+            <li>Rock beats Scissors</li>
+            <li>Scissors beats Paper</li>
+            <li>Paper beats Rock</li>
+        </ul>
+        
+    <section>
+        <p>Make your selection and then click 'Let's Go!'</p>
+        <label>
+        <input id="rock" type="radio" name="RPSSelector" value="rock" checked><span>Rock</span><br>
+        </label>
+        <label>
+        <input id="paper" type="radio" name="RPSSelector" value="paper"><span>Paper</span><br>
+        </label>
+        <label>
+        <input id="scissors" type="radio" name="RPSSelector" value="scissors"><span>Scissors</span><br> <br>
+        </label>
+        <button id="button">click to select</button>
+        <input type="submit" value="Let's Go!"> <input type="submit" value="Reset">
+    </section>
+    
+    <section>
+        <p id="result-display"></p>
+        <ul id="wins-losses-draws">
+            
+            <li>Total Wins: <span id="wins"></span></li>
+            <li>Total Losses: <span id="losses"></span></li>
+            <li>Total Draws: <span id="draws"></span></li>
+        </ul>
+    </section>
+        
+    </main>
+
+    <script type="module" src="app.js"></script>
+    <footer>&copy; 2020 RPC Inc.</footer>
+</body>
+
+</html>
