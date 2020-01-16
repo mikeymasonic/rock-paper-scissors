@@ -22,14 +22,13 @@
     <section>
         <p>Make your selection and then click 'Let's Go!'</p>
         <label>
-        <input id="rock" type="radio" name="RPSSelector" value="rock" checked><span id='rock-img'><img class='image-class' src = "/images/rock.png"/>Rock</span><br>
+        <input id="rock" type="radio" name="RPSSelector" value="rock" checked><img class='image-class' src = "/images/rock.png"/>
         </label>
         <label>
-        <input id="paper" type="radio" name="RPSSelector" value="paper"><span id='paper-img'><img class='image-class' src = "/images/paper.png"/>Paper</span><br>
+        <input id="paper" type="radio" name="RPSSelector" value="paper"><img class='image-class' src = "/images/paper.png"/>
         </label>
         <label>
-        <input id="scissors" type="radio" name="RPSSelector" value="scissors"><span id='scissor-img'><img class='image-class'
-            class='image-class' src = "/images/scissors.png"/>Scissors</span><br> <br>
+        <input id="scissors" type="radio" name="RPSSelector" value="scissors"> <img class='image-class' src = "/images/scissors.png"/><br> 
         </label>
         <button id="button">Let's Go!</button>
         <!-- <input type="submit" value="Let's Go!"> <input type="submit" value="Reset"> -->
@@ -38,6 +37,9 @@
     <section>
         <p id="result-display"></p>
         <p id="computer-choice"></p>
+        <img class="computer-image" id="computer-img" src="/images/rock.png"/>
+        <img class="computer-image2" id="computer-img2" src="/images/paper.png"/>
+        <img class="computer-image3" id="computer-img3" src="/images/scissors.png"/>
         <ul id="wins-losses-draws">
             
             <li>Total Wins: <span id="wins"></span></li>

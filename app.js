@@ -14,6 +14,10 @@ let draws = 0;
 button.addEventListener('click', () => {
     // const isRockPaperSissors = Math.round(Math.random() * 3);
     // let howItLanded;
+    document.querySelector('.computer-image').style.display = 'none';
+    document.querySelector('.computer-image2').style.display = 'none';
+    document.querySelector('.computer-image3').style.display = 'none';
+
 
     const userInput = document.querySelector('input:checked');
     const userChoice = userInput.value;
@@ -28,6 +32,14 @@ button.addEventListener('click', () => {
     console.log(resultDisplay);
 
     computerChoiceDisplay.textContent = computerChoice;
+
+    if (computerChoice === 'rock') {
+        document.querySelector('.computer-image').style.display = 'block';        
+    } else if (computerChoice === 'paper') {
+        document.querySelector('.computer-image2').style.display = 'block';
+    } else {
+        document.querySelector('.computer-image3').style.display = 'block';
+    }
 
     if (result === 'win') {
         wins++;

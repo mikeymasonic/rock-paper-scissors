@@ -1,12 +1,66 @@
+* {
+    text-align: left;
+
+}
+
 input:checked + span {
     color: red;
+    /* border: 5px dotted orange;
+    /* border-color: red; */
+}
+
+input {
+    display: none;
+}
+
+input:checked + .image-class {
+    border: 7px dotted red;
+    /* border-radius: 50%; */
+    box-shadow: chartreuse;
 }
 
 body {
     background-color: #ffea00;
+    
+
+
+
 }
 
 .image-class {
     width: 10%;
     height: 10%;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    
+}
+
+.computer-image {
+    width: 10%;
+    height: 10%;
+    border: 7px dotted red;
+    /* border-radius: 50%; */
+    box-shadow: chartreuse;
+    display: none;
+
+}
+
+.computer-image2 {
+    width: 10%;
+    height: 10%;
+    border: 7px dotted red;
+    /* border-radius: 50%; */
+    box-shadow: chartreuse;
+    display: none;
+
+}
+.computer-image3 {
+    width: 10%;
+    height: 10%;
+    border: 7px dotted red;
+    /* border-radius: 50%; */
+    box-shadow: chartreuse;
+    display: none;
+
 }
