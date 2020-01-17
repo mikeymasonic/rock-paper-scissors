@@ -24,15 +24,14 @@ header {
     text-align: left;
 }
 
-.image-class {
-    width: 15%;
-    height: 15%;
-    /* box-shadow: 10px 10px 5px purple; */
+img {
+
+    width: 110px;
 }
 
 .computer-image {
-    width: 50%;
-    height: 50%;
+    /* width: 50%;
+    height: 50%; */
     border: 7px dotted rgb(53, 117, 50);
     /* box-shadow: 10px 10px 5px purple; */
     display: none;
@@ -40,16 +39,16 @@ header {
 }
 
 .computer-image2 {
-    width: 50%;
-    height: 50%;
+    /* width: 50%;
+    height: 50%; */
     border: 7px dotted rgb(53, 117, 50);
     /* box-shadow: 10px 10px 5px purple; */
     display: none;
 
 }
 .computer-image3 {
-    width: 50%;
-    height: 50%;
+    /* width: 50%;
+    height: 50%; */
     border: 7px dotted rgb(53, 117, 50);
     /* box-shadow: 10px 10px 5px purple; */
     display: none;
