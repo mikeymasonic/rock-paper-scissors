@@ -12,6 +12,27 @@ let wins = 0;
 let losses = 0;
 let draws = 0;
 
+// test to show writing a list in JS
+// const randoThings = ['thing one', 'my phone', 'this class', 'my water bottle', 'my house'];
+
+// const bodyArray = document.getElementsByTagName ('body');
+// const body = bodyArray[0];
+
+
+// for (let i = 0; i < randoThings.length; i++) {
+//     const myH2 = document.createElement('h2');
+//     const thisThing = randoThings[i];
+//     myH2.textContent = thisThing;
+//     myH2.style.color = 'red';
+
+//     if (thisThing === 'this class') {
+//         myH2.textContent = 'noooooo';
+//     }
+
+//     body.appendChild(myH2);
+// }
+
+
 button.addEventListener('click', () => {
     //resets computer's previous selection
     document.querySelector('.computer-image').style.display = 'none';
