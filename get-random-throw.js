@@ -1,14 +1,20 @@
-function getRandomThrow() {
+// function getRandomThrow() {
+//     const randomNumber = Math.floor(Math.random() * 3);
+//     return getThrowFromNumber(randomNumber);
+// }
+
+// function getThrowFromNumber(number) {
+//     if (number === 0) return 'rock';
+//     if (number === 1) return 'paper';
+//     if (number === 2) return 'scissors';
+// }
+
+function getRandomThrow(){ 
+    const arrayRockPaperScissors = ['rock','paper','scissors'];
     const randomNumber = Math.floor(Math.random() * 3);
-    return getThrowFromNumber(randomNumber);
-}
+    return arrayRockPaperScissors[randomNumber];
 
-function getThrowFromNumber(number) {
-    if (number === 0) return 'rock';
-    if (number === 1) return 'paper';
-    if (number === 2) return 'scissors';
 }
-
 function checkResult(player, computer) {
     if (computer === player) return 'draw';
     else if (computer === 'scissors' && player === 'rock') return 'win';
@@ -20,6 +26,5 @@ function checkResult(player, computer) {
 
 export {
     getRandomThrow,
-    getThrowFromNumber,
     checkResult
 };
