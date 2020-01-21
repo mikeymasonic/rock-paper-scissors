@@ -32,6 +32,16 @@ let draws = 0;
 //     body.appendChild(myH2);
 // }
 
+function showComputerImage(computerChoice){
+    if (computerChoice === 'rock') {
+        document.querySelector('.computer-image').style.display = 'block';        
+    } else if (computerChoice === 'paper') {
+        document.querySelector('.computer-image2').style.display = 'block';
+    } else {
+        document.querySelector('.computer-image3').style.display = 'block';
+    }
+}
+
 
 button.addEventListener('click', () => {
     //resets computer's previous selection
@@ -55,7 +65,7 @@ button.addEventListener('click', () => {
     } else {
         document.querySelector('.computer-image3').style.display = 'block';
     }
-}
+});
 
 //Win Loss Draw display
 function displayResult(result){
